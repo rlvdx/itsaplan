@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.0](https://github.com/croffasia/itsaplan/compare/v0.16.0...v0.17.0) (2026-08-31)
+
+
+### Features
+
+* **web:** add French translation ([#270](https://github.com/croffasia/itsaplan/issues/270)) ([013a775](https://github.com/croffasia/itsaplan/commit/013a7758f1d34603372cf8dfcc39e95927913fc3))
+
 ## [0.16.0](https://github.com/croffasia/itsaplan/compare/v0.15.0...v0.16.0) (2026-08-31)
 
 
