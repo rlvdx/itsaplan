@@ -21,14 +21,19 @@ bun run dev                                      # api + web together, via Turbo
 ```
 
 The apps run on: web <http://localhost:3001>, api <http://localhost:3000>, MinIO console
-<http://localhost:9001>. `bun run dev` runs the whole workspace in watch mode from the repo
-root; the dev compose brings up only the backing services and the apps run on the host.
+<http://localhost:9011>, MinIO S3 API <http://localhost:9010>. `bun run dev` runs the whole
+workspace in watch mode from the repo root; the dev compose brings up only the backing
+services and the apps run on the host.
 
 If host port 5432 is taken, set another one and update `DATABASE_URL` in `.env`:
 
 ```bash
 POSTGRES_PORT=5433 docker compose -f docker-compose.dev.yml up -d
 ```
+
+MinIO is published on 9010/9011, leaving its own default pair 9000/9001 free for other
+local containers. `S3_PORT` and `S3_CONSOLE_PORT` move them; `S3_ENDPOINT` in `.env` has
+to carry the same port as `S3_PORT`.
 
 ## Commands
 
